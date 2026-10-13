@@ -1,8 +1,7 @@
-#include<libpynq.h>
-
-void coord_receive()
+void coord_receive(float *x, float *y)
 {
-    float x=0, y=0;
+    *x=0;
+    *y=0;
     bool c=false;
     uint8_t f_safe=0;
     do
@@ -15,12 +14,12 @@ void coord_receive()
     for(int i=0; i<=13; i++)
     {
         if(c==false)
-            x=x*10+(uart_recv(UART0));
+            *x=*x*10+(uart_recv(UART0));
         else if(c==true)
-            y=y*10+(uart_recv(UART0));
+            *y=*y*10+(uart_recv(UART0));
         if(uart_recv(UART0)==',')
             c=true;
     }
-    x/=100;
-    y/=100;
+    *x/=100.00;
+    *y/=100.00;
 }
