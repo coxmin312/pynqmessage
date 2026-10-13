@@ -7,7 +7,7 @@
 
 int lun=MAX_LENGTH+OFFSET;
 char JSON_string[MAX_LENGTH+OFFSET];
-const char *msg1 = "{\"ping\": {\"id\": \"1748765334567\", \"timestamp_ms\": 1748765334567, \"payload\": \"ABCDEFAB\"}, \"coordinates\": {\"X\": 109.82, \"Y\": 15.66}}\n";//tbr
+//const char *msg1 = "{\"ping\": {\"id\": \"1748765334567\", \"timestamp_ms\": 1748765334567, \"payload\": \"ABCDEFAB\"}, \"coordinates\": {\"X\": 109.82, \"Y\": 15.66}}\n";//tbr
 int l;
 
 int main (void)
@@ -15,21 +15,9 @@ int main (void)
   init();
   while(get_button_state(BUTTON0)==0)
   {
-    /*while(l<=lun)
-    {
-      if (*msg1!='\0')
-      {
-        uart_send(UART0, (uint8_t)*msg1);
-        msg1++;  
-      }   //tbr
-      UART0_pseudoreceive(l, JSON_string);
-      l++;
-    }*/
     UART0_receive(JSON_string);
     UART1_send_coord(JSON_string, OFFSET);
-    //UART1_receive(JSON_string);
   }
-      //the code never ends. Must implement stop function
   sleep_msec(400);
   pynq_destroy();
   return EXIT_SUCCESS;
