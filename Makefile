@@ -1,6 +1,6 @@
 include ../shared.mk
 
-SOURCES:=$(wildcard *.c) $(wildcard Send/*.c) $(wildcard Receive/*.c) $(wildcard Pseudo/*.c) $(wildcard Init/*.c)
+SOURCES:=$(shell find . -name '*.c')
 CFLAGS+=-Werror
 
 include ../end.mk

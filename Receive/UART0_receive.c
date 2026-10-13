@@ -16,5 +16,5 @@ void UART0_receive(char JSON_string[])
                 break;
         i++;
     }
-    //printf("\n");
+    printf("\n");
 }
