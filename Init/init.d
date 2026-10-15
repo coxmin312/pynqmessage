@@ -1,4 +1,4 @@
-init.o: init.c ../..//library/libpynq.h ../..//library/adc.h \
+Init/init.o: Init/init.c ../..//library/libpynq.h ../..//library/adc.h \
  ../..//library/arm_shared_memory_system.h ../..//library/audio.h \
  ../..//library/buttons.h ../..//library/gpio.h ../..//library/pinmap.h \
  ../..//library/display.h ../..//library/fontx.h ../..//library/i2cps.h \

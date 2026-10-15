@@ -1,6 +1,6 @@
 #include<libpynq.h>
 
-int xy_axis[13]={109, 110, 111, 112, 113, 114, 115, 123, 124, 125, 126, 127, 128}
+int xy_axis[13]={109, 110, 111, 112, 113, 114, 115, 122, 123, 124, 125, 126, 127};
 
 void UART1_send_coord(char JSON_string[], int off)
 {
@@ -12,5 +12,6 @@ void UART1_send_coord(char JSON_string[], int off)
         else if(JSON_string[xy_axis[i]]==',')
             uart_send(UART1, JSON_string[xy_axis[i]+off]);
     }     
-    uart_send(UART1, '\n');
+    uart_send(UART1, 255);
+    printf("\n");
 }

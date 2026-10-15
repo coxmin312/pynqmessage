@@ -1,4 +1,4 @@
-UART0_receive.o: UART0_receive.c ../..//library/libpynq.h \
+Receive/UART0_receive.o: Receive/UART0_receive.c ../..//library/libpynq.h \
  ../..//library/adc.h ../..//library/arm_shared_memory_system.h \
  ../..//library/audio.h ../..//library/buttons.h ../..//library/gpio.h \
  ../..//library/pinmap.h ../..//library/display.h ../..//library/fontx.h \

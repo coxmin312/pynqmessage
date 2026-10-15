@@ -1,4 +1,4 @@
-UART1_send_coord.o: UART1_send_coord.c ../..//library/libpynq.h \
+Send/UART1_send_coord.o: Send/UART1_send_coord.c ../..//library/libpynq.h \
  ../..//library/adc.h ../..//library/arm_shared_memory_system.h \
  ../..//library/audio.h ../..//library/buttons.h ../..//library/gpio.h \
  ../..//library/pinmap.h ../..//library/display.h ../..//library/fontx.h \

@@ -3,7 +3,7 @@
 void UART0_receive(char JSON_string[])
 {
     int i=0;
-    while(1)
+    while(get_button_state(BUTTON0)==0)
     {
         JSON_string[i]=uart_recv(UART0);
         printf("%c", JSON_string[i]);
@@ -16,5 +16,5 @@ void UART0_receive(char JSON_string[])
                 break;
         i++;
     }
-    //printf("\n");
+    printf("\n");
 }
