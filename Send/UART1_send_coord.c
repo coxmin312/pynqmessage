@@ -9,7 +9,7 @@ void UART1_send_coord(char JSON_string[], int off)
     {
         if(JSON_string[xy_axis[i]+off]>='0' && JSON_string[xy_axis[i]+off]<='9')
             uart_send(UART1, JSON_string[xy_axis[i]+off]-48);
-        else if(JSON_string[xy_axis[i]]==',')
+        else if(JSON_string[xy_axis[i]+off]==',')
             uart_send(UART1, JSON_string[xy_axis[i]+off]);
     }     
     uart_send(UART1, 255);

@@ -6,4 +6,4 @@ main.o: main.c ../..//library/libpynq.h ../..//library/adc.h \
  ../..//library/log.h ../..//library/pwm.h ../..//library/switchbox.h \
  ../..//library/uart.h ../..//library/uio.h ../..//library/util.h \
  ../..//library/version.h ../..//platform/lcdconfig.h \
- ../..//platform/platform.h init.h UART.h
+ ../..//platform/platform.h UART.h init.h
