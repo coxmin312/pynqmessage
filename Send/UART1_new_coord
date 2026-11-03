@@ -1,7 +1,7 @@
 #include<libpynq.h>
 #include<string.h>
 
-char X[4]={0, 0, 0, '0'}, Y[4]={0, 0, 0, '0'}; //monkeybrain bug fix: if all are defined like '0', the array will be full of 0 and so if the coord is ex: 2.5 the array will only have 2 spaces filled and the other would automaticaly be 0 so it sends 2500. By defining how I did it only puts a 0 on the last place and the other are just null characters.
+char X[4]={0, 0, 0, 0}, Y[4]={0, 0, 0, 0}; //monkeybrain bug fix: if all are defined like '0', the array will be full of 0 and so if the coord is ex: 2.5 the array will only have 2 spaces filled and the other would automaticaly be 0 so it sends 2500. By defining how I did it only puts a 0 on the last place and the other are just null characters.
 int i=0 digit;
 
 void addX(int i, char string[])
